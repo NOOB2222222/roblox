@@ -17,10 +17,8 @@ local getClosestPlayer = function()
 			local Humanoid = _Humanoid
 			if Character and Humanoid then
 				local Root = Character:FindFirstChild("HumanoidRootPart")
-				local _arg0_1 = Root and Root:IsA("Part")
+				local _arg0_1 = Root:IsA("Part")
 				assert(_arg0_1)
-				local _camera = Camera
-				assert(_camera)
 				local Vector, IsOnScreen = Camera:WorldToViewportPoint(Root.Position)
 				if IsOnScreen then
 					local MousePos = Vector2.new(Mouse.X, Mouse.Y)
